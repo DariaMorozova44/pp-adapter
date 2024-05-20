@@ -40,12 +40,6 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- @Value и @ConfigurationProperties для внедрения значений из свойств в наш код -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
-        </dependency>
 
         <!-- Все для работы с БД -->
         <dependency>
@@ -70,12 +64,6 @@
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
             <version>1.5.3.Final</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.modelmapper</groupId>
-            <artifactId>modelmapper</artifactId>
-            <version>3.2.0</version>
         </dependency>
 
         <dependency>

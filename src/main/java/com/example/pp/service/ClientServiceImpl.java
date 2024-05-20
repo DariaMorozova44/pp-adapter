@@ -53,7 +53,7 @@ public class ClientServiceImpl implements ClientService {
                 }
             }
 
-           if (LocalTime.now().isBefore(LocalTime.of(19, 0))) {
+            if (LocalTime.now().isBefore(LocalTime.of(19, 0))) {
                 List<Client> unsentMessages = repository.findAllUnsentMessages();
                 for (Client client : unsentMessages) {
                     Message message = clientMapper.clientToMessage(client, getMyVariableValue());

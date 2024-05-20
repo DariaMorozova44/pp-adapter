@@ -73,9 +73,7 @@ public class ClientServiceImplTest {
     }
 
 
-
-
-@Test
+    @Test
     public void testGetClientsById() {
         String clientId = "2";
         ClientsInfo clientsInfo = new ClientsInfo();

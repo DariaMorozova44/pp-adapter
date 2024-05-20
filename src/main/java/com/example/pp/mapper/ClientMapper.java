@@ -10,15 +10,12 @@ import org.mapstruct.Mapping;
 @Mapper(componentModel = "spring")
 public interface ClientMapper {
 
-    @Mapping(target = "fullName", expression = "java(concat(clientsInfo))")
+    @Mapping(target = "fullName", expression = "java(clientsInfo.getName() + ' ' + clientsInfo.getMiddleName() + ' ' + clientsInfo.getSurname())")
     @Mapping(target = "phone", source = "clientsInfo.phone")
     @Mapping(target = "birthday", source = "clientsInfo.birthday")
     @Mapping(target = "messageSend", ignore = true)
     Client clientsInfoToClient(ClientsInfo clientsInfo);
 
-    default String concat(ClientsInfo clientsInfo) {
-        return clientsInfo.getName() + ' ' + clientsInfo.getMiddleName() + ' ' + clientsInfo.getSurname();
-    }
 
     @Mapping(target = "message", expression = "java(concat1(client,string))")
     @Mapping(target = "phone", source = "client.phone")
